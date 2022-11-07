@@ -17,7 +17,7 @@
     <h2 id="username"></h2>
     <div id="intro"></div>
     <div class="btn_set">
-        <button type="button" class="btn btn-primary mb-3" onclick="loadRecommends()">추천받기</button>
+        <button type="button" class="btn btn-primary mb-3" onclick="loadRecommends(); this.onclick=null">추천받기</button>
         <button type="button" class="btn btn-primary mb-3" onclick="location.href='/article_list.html'">게시글 보기</button>
         <button type="button" class="btn btn-primary mb-3" onclick="location.href='/article_create.html'">게시글 작성</button>
         <button id="loginout" type="button" class="btn btn-primary mb-3" onclick="handleLogout()">로그아웃</button>
