@@ -134,6 +134,7 @@ async function getArticles() {
     return response_json
 }
 
+
 async function articleDetail(id) {
     console.log(id)
     location.href='/article_detail.html'
@@ -151,4 +152,6 @@ async function handleRecommend() {
         },
         method: 'GET',
     })
+    response_json = await response.json()
+    return response_json
 }

@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <script src="api.js"></script>
+    <script src="recommend.js"></script>
     <title>DRF 프론트엔드</title>
 </head>
 <body>
@@ -16,57 +17,12 @@
     <h2 id="username"></h2>
     <div id="intro"></div>
     <div class="btn_set">
-        <button type="button" class="btn btn-primary mb-3" onclick="handleRecommend()">추천받기</button>
+        <button type="button" class="btn btn-primary mb-3" onclick="loadRecommends()">추천받기</button>
         <button type="button" class="btn btn-primary mb-3" onclick="location.href='/article_list.html'">게시글 보기</button>
         <button type="button" class="btn btn-primary mb-3" onclick="location.href='/article_create.html'">게시글 작성</button>
         <button id="loginout" type="button" class="btn btn-primary mb-3" onclick="handleLogout()">로그아웃</button>
     </div>
-    <div class="row row-cols-1 row-cols-md-5 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a short card.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-        </div>
+    <div class="row row-cols-1 row-cols-md-5 g-4" id="recommendContainer">
     </div>
 </body>
 </html>
